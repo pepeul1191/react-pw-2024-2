@@ -1,6 +1,7 @@
 // Navbar.jsx
 import React, { Component } from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   static defaultProps = {
@@ -18,21 +19,21 @@ class Navbar extends Component {
 
     return (
       <header>
-        <nav class="navbar">
-          <div class="container">
-            <div class="logo">
-              <a href="/">{siteName}</a>
+        <nav className="navbar">
+          <div className="container">
+            <div className="logo">
+              <Link to="/">{siteName}</Link>
             </div>
-            <ul class="nav-links">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Sobre Nosotros</a></li>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Contacto</a></li>
+            <ul className="nav-links">
+              <li><Link to="/">Inicio</Link></li>
+              <li><Link to="/nosotros">Sobre Nosotros</Link></li>
+              <li><Link to="/servicios">Servicios</Link></li>
+              <li><Link to="/contacto">Contacto</Link></li>
             </ul>
-            <div class="menu-toggle">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+            <div className="menu-toggle">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
             </div>
           </div>
         </nav>
